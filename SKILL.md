@@ -1,5 +1,5 @@
 ---
-name: word-gongwen-format
+name: gongwen-word-format
 version: "1.1.0"
 display_name: "公文 Word 格式化"
 display_name_en: "Government Document Word Formatter"
