@@ -1,6 +1,11 @@
 ---
 name: word-gongwen-format
-description: 公文 Word 文档格式化技能。当用户需要按公文规范排版 .docx 文件（设置标题与正文字体、字号、段落格式）时使用。规范：标题一为方正大标宋简体（字号按字数自适应）、标题二为方正楷体GBK三号、标题三为方正仿宋GB2312四号、表格内正文为方正仿宋GB2312四号、正文为方正仿宋GB2312三号；正文段落首行缩进2字符、段前段后各8磅、行距1.5倍、两端对齐、字体黑色。触发词：公文格式、公文字体、公文排版、方正大标宋、方正仿宋、方正楷体。This skill should be used when formatting Word documents according to Chinese official document (公文) typography standards.
+version: 1.1.0
+display_name: 公文 Word 格式化
+display_name_en: Government Document Word Formatter
+description: 公文 Word 文档格式化技能。当用户需要按公文规范排版 .docx 文件（设置标题与正文字体、字号、段落格式）时使用。规范：标题一为方正大标宋简体（字号按字数自适应）、标题二为方正楷体GBK三号、标题三为方正仿宋GB2312四号（均加粗）、表格内正文为方正仿宋GB2312四号、正文为方正仿宋GB2312三号；正文段落首行缩进2字符、段前段后各8磅、行距1.5倍、两端对齐、字体黑色。触发词：公文格式、公文字体、公文排版、方正大标宋、方正仿宋、方正楷体。This skill should be used when formatting Word documents according to Chinese official document (公文) typography standards.
+description_zh: 公文 Word 文档格式化技能。当用户需要按公文规范排版 .docx 文件（设置标题与正文字体、字号、段落格式）时使用。规范：标题一为方正大标宋简体（字号按字数自适应）、标题二为方正楷体GBK三号、标题三为方正仿宋GB2312四号（均加粗）、表格内正文为方正仿宋GB2312四号、正文为方正仿宋GB2312三号；正文段落首行缩进2字符、段前段后各8磅、行距1.5倍、两端对齐、字体黑色。触发词：公文格式、公文字体、公文排版、方正大标宋、方正仿宋、方正楷体。
+description_en: Formats Word documents (.docx) according to Chinese official document (gongwen) typography standards. Use when the user needs to apply official font, size, and paragraph rules to a .docx: Title 1 in FZ Biaosong (auto-sized by length, bold), Title 2 in FZ Kaiti GBK 16pt bold, Title 3 and table body in FZ Fangsong GB2312 14pt bold, body text in FZ Fangsong GB2312 16pt; body paragraphs use 2-character first-line indent, 8pt spacing before/after, 1.5 line spacing, justified alignment, and black font.
 agent_created: true
 ---
 
