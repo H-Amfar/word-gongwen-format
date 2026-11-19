@@ -52,8 +52,8 @@ def h1_size_by_length(text):
         return Pt(18)   # 小二，允许折行
 
 
-def set_run_font(run, font_name, size, color=BLACK):
-    """设置 run 的中西文字体、字号、颜色。"""
+def set_run_font(run, font_name, size, color=BLACK, bold=False):
+    """设置 run 的中西文字体、字号、颜色、加粗。"""
     run.font.name = font_name
     # eastAsia 保证中文字体生效
     rPr = run._element.get_or_add_rPr()
@@ -67,7 +67,7 @@ def set_run_font(run, font_name, size, color=BLACK):
     if size is not None:
         run.font.size = size
     run.font.color.rgb = color
-    run.font.bold = False
+    run.font.bold = bold
 
 
 def set_paragraph_format(p, align=WD_ALIGN_PARAGRAPH.JUSTIFY,
@@ -108,12 +108,13 @@ def format_heading(doc, style_names, font_name, size_fn):
         rFonts.set(qn("w:ascii"), font_name)
         rFonts.set(qn("w:hAnsi"), font_name)
         style.font.color.rgb = BLACK
+        style.font.bold = True  # 标题加粗
         # 逐段处理（标题一需按字数自适应字号）
         for p in doc.paragraphs:
             if p.style.name == name:
                 size = size_fn(p.text) if callable(size_fn) else size_fn
                 for run in p.runs:
-                    set_run_font(run, font_name, size)
+                    set_run_font(run, font_name, size, bold=True)
                 if callable(size_fn):
                     set_paragraph_format(
                         p,
